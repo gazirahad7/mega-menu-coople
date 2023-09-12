@@ -226,7 +226,7 @@ nav .nav-container ul li {
   z-index: 999;
   position: fixed;
   width: 100%;
-  top: 14%;
+  top: 8%;
   left: 0;
   right: 0;
 }
@@ -249,9 +249,9 @@ nav .nav-container ul li {
 .sub-menu {
   position: relative;
 }
-/* .mobile-menu ul li:hover {
+.mobile-menu ul li:hover {
   background-color: #eee;
-} */
+}
 .plus-svg,
 .close-svg {
   cursor: pointer;
