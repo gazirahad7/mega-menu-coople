@@ -229,7 +229,9 @@ nav .nav-container ul li {
   fill: var(--bg-pink) !important;
   stroke: var(--bg-pink) !important;
 } */
-
+.mega-menu-col-two a:hover .color-change-svg {
+  fill: var(--bg-pink) !important;
+}
 .mega-menu-item-left {
   padding-left: 20%;
 }
