@@ -276,6 +276,7 @@ nav .nav-container ul li {
 .mobile-menu ul li:hover {
   background-color: #eee;
 }
+
 .plus-svg,
 .close-svg {
   cursor: pointer;
