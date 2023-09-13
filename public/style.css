@@ -243,7 +243,12 @@ nav .nav-container ul li {
   margin: 0 20px;
 }
 .mobile-menu ul li,
-.sub-menu ul li a {
+.sub-menu ul li {
+  list-style: none;
+  cursor: pointer;
+}
+.mobile-menu ul li,
+.sub-menu ul li {
   list-style: none;
   margin: 8px 0 15px -38px;
   padding: 10px 20px;

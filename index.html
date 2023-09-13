@@ -498,45 +498,7 @@
     </section>
 
     <script>
-      /*
-      const toggleButton = document.getElementById("toggleButton");
-      const contentDiv = document.getElementById("content");
-
-      // Function to check if a click occurred outside the content div
-      function checkClickOutside(event) {
-        if (
-          !contentDiv.contains(event.target) &&
-          !toggleButton.contains(event.target)
-        ) {
-          hideContent();
-        }
-      }
-
-      // Function to show the content div
-      function showContent() {
-        contentDiv.classList.remove("hidden");
-        contentDiv.classList.add("visible");
-        document.addEventListener("click", checkClickOutside);
-      }
-
-      // Function to hide the content div
-      function hideContent() {
-        contentDiv.classList.remove("visible");
-        contentDiv.classList.add("hidden");
-        document.removeEventListener("click", checkClickOutside);
-      }
-
-      // Add a click event listener to the button
-      toggleButton.addEventListener("click", () => {
-        if (contentDiv.classList.contains("hidden")) {
-          showContent();
-        } else {
-          hideContent();
-        }
-      });
-
-      */
-
+      //  reuseable  toggle function
       function createToggleComponent(buttonElement, contentElement) {
         function checkClickOutside(event) {
           if (
