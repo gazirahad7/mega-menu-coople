@@ -2,14 +2,15 @@
   --secondary-color: #f2f4f5;
   --bg-pink: #e0004d;
 }
+
+/* ====== Global setting  ======== */
+
 body {
   font-family: "Lato", sans-serif;
   font-family: "Poppins", sans-serif;
   font-family: "Roboto", sans-serif;
 }
-.cus-bg-secondary {
-  background-color: var(--secondary-color);
-}
+
 * {
   box-sizing: border-box;
 }
@@ -50,14 +51,14 @@ a {
   transition: opacity 0.3s ease-in-out, max-height 0.3s ease-in-out;
 }
 
-.triangle-up {
+.triangle-up-one {
   width: 0;
   height: 0;
   border-left: 12px solid transparent;
   border-right: 12px solid transparent;
   border-bottom: 20px solid #555;
   position: absolute;
-  left: 38%;
+  left: 35%;
 }
 .cus-container {
   margin-left: auto;
@@ -89,11 +90,12 @@ a {
   color: #fff !important;
 }
 /* ======== custom colors    ======== */
-
+.cus-bg-secondary {
+  background-color: var(--secondary-color);
+}
 .cus-text-black {
   color: #000 !important;
 }
-
 .cus-text-gray {
   color: #333 !important;
 }
@@ -102,6 +104,9 @@ a {
 
 .cus-gap {
   gap: 40px;
+}
+.cus-gap-1 {
+  gap: 10px;
 }
 .cus-gap-2 {
   gap: 20px;
@@ -195,8 +200,6 @@ nav .nav-container ul li {
 
 /* ======== Mega menu  style  ======== */
 
-.mega-menues {
-}
 .mega-menu-cont {
   position: fixed;
   left: 0;
@@ -208,7 +211,6 @@ nav .nav-container ul li {
   box-shadow: 0px -12px 18px rgba(0, 0, 0, 0.3),
     0px 12px 18px rgba(0, 0, 0, 0.3);
 }
-
 .mega-menu-item-left {
   padding-left: 20%;
 }
@@ -296,7 +298,6 @@ nav .nav-container ul li {
   }
 }
 
-/* Responsive breakpoints */
 @media (min-width: 576px) {
   .cus-container {
     max-width: 540px;
