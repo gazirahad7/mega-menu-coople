@@ -217,9 +217,14 @@ nav .nav-container ul li {
   color: var(--bg-pink);
 }
 
-.mega-menu-col-two-item:hover {
+.mega-menu-col-two a:hover p {
   color: var(--bg-pink) !important;
 }
+
+.mega-menu-col-two:hover a svg {
+  fill: var(--bg-pink) !important;
+}
+
 .mega-menu-item-left {
   padding-left: 20%;
 }

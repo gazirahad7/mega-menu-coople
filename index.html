@@ -139,6 +139,7 @@
                             width="25"
                             height="25"
                             viewBox="0 0 24 24"
+                            class="color-change-svg"
                           >
                             <path
                               fill="#7b7a7a"
@@ -199,6 +200,30 @@
                                 d="M8 3.5A1.5 1.5 0 0 1 9.5 2h5A1.5 1.5 0 0 1 16 3.5v1A1.5 1.5 0 0 1 14.5 6h-5A1.5 1.5 0 0 1 8 4.5v-1Z"
                               />
                             </g>
+                          </svg>
+                        </div>
+                        <p class="cus-text-sm">Detailhandel</p>
+                      </div>
+                    </a>
+                    <a href="#">
+                      <div
+                        class="cus-justify-between cus-align-items-center cus-gap-2"
+                      >
+                        <div>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="25"
+                            height="25"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              fill="none"
+                              stroke="#7b7a7a"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="1.5"
+                              d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 3.75h.008v.008h-.008v-.008Zm0 3h.008v.008h-.008v-.008Zm0 3h.008v.008h-.008v-.008Z"
+                            />
                           </svg>
                         </div>
                         <p class="cus-text-sm">Detailhandel</p>
@@ -656,9 +681,25 @@
         ) {
           mobileMenu.style.maxHeight = mobileMenu.scrollHeight + "px";
           mobileMenu.style.opacity = "1";
+          hamburgerBtn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M13.46 12L19 17.54V19h-1.46L12 13.46L6.46 19H5v-1.46L10.54 12L5 6.46V5h1.46L12 10.54L17.54 5H19v1.46L13.46 12Z"/></svg>`;
         } else {
           mobileMenu.style.maxHeight = "0px";
           mobileMenu.style.opacity = "0";
+          hamburgerBtn.innerHTML = `<svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="32"
+              height="32"
+              viewBox="0 0 48 48"
+            >
+              <path
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="4"
+                d="M7.95 11.95h32m-32 12h32m-32 12h32"
+              />
+            </svg>`;
         }
       });
 
