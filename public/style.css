@@ -73,7 +73,9 @@ a {
   margin-right: auto;
   margin-left: auto;
 }
-
+.cus-divider {
+  color: #dee2e4;
+}
 /* ======== custom Buttons    ======== */
 
 .cus-login-btn {
