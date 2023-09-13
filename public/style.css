@@ -213,6 +213,13 @@ nav .nav-container ul li {
   box-shadow: 0px -12px 18px rgba(0, 0, 0, 0.3),
     0px 12px 18px rgba(0, 0, 0, 0.3);
 }
+.mega-menu-cont h4:hover {
+  color: var(--bg-pink);
+}
+
+.mega-menu-col-two-item:hover {
+  color: var(--bg-pink) !important;
+}
 .mega-menu-item-left {
   padding-left: 20%;
 }
