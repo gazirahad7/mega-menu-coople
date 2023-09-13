@@ -197,7 +197,7 @@ nav .nav-container ul li {
 
 .mega-menues {
 }
-.mega-menu-for-businesses {
+.mega-menu-cont {
   position: fixed;
   left: 0;
   right: 0;
@@ -285,6 +285,10 @@ nav .nav-container ul li {
   /* nav {
     box-shadow: 0px 12px 18px -6px #fff;
   } */
+
+  .mega-menu-cont {
+    display: none !important;
+  }
 }
 
 /* Responsive breakpoints */
@@ -296,6 +300,9 @@ nav .nav-container ul li {
   .nav-middle,
   .nav-end {
     display: none;
+  }
+  .mega-menu-cont {
+    display: none !important;
   }
 }
 @media (min-width: 768px) {
@@ -326,6 +333,12 @@ nav .nav-container ul li {
   .cus-container-fluid {
     max-width: 1200px;
   }
+  .mega-menu-cont {
+    display: block !important;
+  }
+  .mobile-menu {
+    display: none !important;
+  }
 
   .mega-menu-item-left {
     padding-left: 20%;
@@ -349,6 +362,9 @@ nav .nav-container ul li {
   }
 }
 @media (min-width: 1500px) {
+  .mobile-menu {
+    display: none !important;
+  }
   .mega-menu-item-left {
     padding-left: 20%;
   }
