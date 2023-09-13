@@ -72,6 +72,8 @@
           </div>
         </div>
       </div>
+
+      <!-- Markup  for Mega menu -->
       <div class="hidden mega-menu-for-businesses" id="content">
         <!-- Markup for  1st mega menu  -->
 
@@ -544,10 +546,13 @@
             hideContent();
           }
         }
+
         function showContent() {
           contentElement.classList.remove("hidden");
           contentElement.classList.add("visible");
+          document.addEventListener("click", checkClickOutside);
         }
+
         function hideContent() {
           contentElement.classList.remove("visible");
           contentElement.classList.add("hidden");
