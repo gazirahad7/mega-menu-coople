@@ -745,6 +745,21 @@
           minusSvg.style.display = "none";
         });
       }
+
+      // hover then svg color change
+
+      const hoverDiv = document.querySelector(".mega-menu-col-two-item");
+      const circle = document.getElementById("myCircle");
+
+      hoverDiv.addEventListener("mouseover", () => {
+        circle.setAttribute("fill", "#e0004d");
+        circle.setAttribute("stroke", "#e0004d");
+      });
+
+      hoverDiv.addEventListener("mouseout", () => {
+        circle.setAttribute("fill", "#7b7a7a");
+        circle.setAttribute("stroke", "#7b7a7a");
+      });
     </script>
   </body>
 </html>

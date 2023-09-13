@@ -220,10 +220,15 @@ nav .nav-container ul li {
 .mega-menu-col-two a:hover p {
   color: var(--bg-pink) !important;
 }
-
+/* 
 .mega-menu-col-two:hover a svg {
   fill: var(--bg-pink) !important;
-}
+} */
+
+/* .mega-menu-col-two-item:hover .color-change-svg {
+  fill: var(--bg-pink) !important;
+  stroke: var(--bg-pink) !important;
+} */
 
 .mega-menu-item-left {
   padding-left: 20%;
@@ -265,10 +270,9 @@ nav .nav-container ul li {
 }
 .mobile-menu ul li,
 .sub-menu ul li {
-  list-style: none;
   margin: 8px 0 15px -38px;
   padding: 10px 20px;
-  cursor: pointer;
+  width: 100%;
 }
 .sub-menu {
   position: relative;
