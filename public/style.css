@@ -18,6 +18,13 @@ a {
   text-decoration: none;
   /* color: #666; */
 }
+.cus-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 40px;
+  grid-auto-flow: row;
+}
 
 /* ====== Reuseable  class ======== */
 
