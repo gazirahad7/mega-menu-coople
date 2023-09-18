@@ -18,18 +18,18 @@ a {
   text-decoration: none;
   /* color: #666; */
 }
+
+/* ====== Reuseable  class ======== */
+
+.w-150 {
+  width: 150px;
+}
 .cus-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr;
   gap: 0px 40px;
   grid-auto-flow: row;
-}
-
-/* ====== Reuseable  class ======== */
-
-.w-150 {
-  width: 150px;
 }
 
 .cus-d-flex {
