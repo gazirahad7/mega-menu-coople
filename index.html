@@ -594,12 +594,66 @@
           <div>
             <h2 class="cus-text-md">Für Unternehmen</h2>
             <ul>
-              <li>
+              <li class="mobile-menu-item">
                 <div
                   class="cus-justify-between cus-align-items-center open-dropdown"
-                  id="toggleButton3"
                 >
                   <span class="cus-text-md">Cooples Personalverleih</span>
+
+                  <span id="plus-arrow">
+                    <svg
+                      class="plus-svg"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="18"
+                      height="18"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="#333"
+                        d="M11 13H5v-2h6V5h2v6h6v2h-6v6h-2v-6Z"
+                      />
+                    </svg>
+                    <svg
+                      class="close-svg"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="18"
+                      height="18"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="#333"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="m16 16l-4-4m0 0L8 8m4 4l4-4m-4 4l-4 4"
+                      />
+                    </svg>
+                  </span>
+                </div>
+
+                <!-- Sub menu -->
+
+                <div class="sub-menu answer">
+                  <ul>
+                    <li>
+                      <a href="#" class="cus-text-xs cus-text-gray"
+                        >Jetzt Account erstellen</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="cus-text-xs cus-text-gray"
+                        >Demo anfragen</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="mobile-menu-item">
+                <div
+                  class="cus-justify-between cus-align-items-center open-dropdown"
+                >
+                  <span class="cus-text-md">Cooples test</span>
 
                   <span id="plus-arrow">
                     <svg
@@ -950,7 +1004,7 @@
 
       // for mobile dropdown menu
 
-      const questionDivs = document.querySelectorAll(".mobile-menu");
+      const questionDivs = document.querySelectorAll(".mobile-menu-item");
 
       questionDivs.forEach((questionDiv) => {
         const question = questionDiv.querySelector(".open-dropdown");
@@ -959,6 +1013,7 @@
         const minusSvg = questionDiv.querySelector(".close-svg");
 
         question?.addEventListener("click", () => {
+          //alert("ok");
           if (
             answer.style.maxHeight === "0px" ||
             answer.style.maxHeight === ""
@@ -996,12 +1051,12 @@
       const hoverDiv = document.querySelector(".mega-menu-col-two-item");
       const circle = document.getElementById("myCircle");
 
-      hoverDiv.addEventListener("mouseover", () => {
+      hoverDiv?.addEventListener("mouseover", () => {
         circle.setAttribute("fill", "#e0004d");
         circle.setAttribute("stroke", "#e0004d");
       });
 
-      hoverDiv.addEventListener("mouseout", () => {
+      hoverDiv?.addEventListener("mouseout", () => {
         circle.setAttribute("fill", "#7b7a7a");
         circle.setAttribute("stroke", "#7b7a7a");
       });
