@@ -1021,10 +1021,16 @@
             closeAllOpenSubMenu();
 
             answer.style.maxHeight = answer.scrollHeight + "px";
+
+            mobileMenu.style.maxHeight =
+              mobileMenu.scrollHeight + answer.scrollHeight + "px";
+
             answer.style.opacity = "1";
             plusSvg.style.display = "none";
             minusSvg.style.display = "block";
           } else {
+            mobileMenu.style.maxHeight =
+              mobileMenu.scrollHeight + answer.scrollHeight + "px";
             answer.style.maxHeight = "0px";
             answer.style.opacity = "0";
             plusSvg.style.display = "block";
