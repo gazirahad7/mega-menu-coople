@@ -1,87 +1,736 @@
-<div class="">
-  <div class="language-country-swicher-header">
-    <div class="lan-coutry-container-header">
-      <div class="visiable-part-header">
-        <div class="visiable-inner-header">
-          <div class="visiable-country-header">
-            <div class="heading-header">Country</div>
-            <ul class="country-list-shwicher-header">
-              <li class="single-country switzerland" data-value="Switzerland">
-                <a href="#" class="single-country-link">Switzerland</a>
-              </li>
-              <li
-                class="single-country unided-Kingdom"
-                data-value="United Kingdom"
-              >
-                <a href="#" class="single-country-link">United Kingdom</a>
-              </li>
-            </ul>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      /* === language switcher css start  === */
+      .lan-coutry-container-header ul {
+        padding: 0px;
+        margin: 0px;
+      }
+
+      .lan-coutry-container-header ul li {
+        list-style: none;
+        padding-top: 15px;
+      }
+
+      .lan-coutry-container-header ul li a {
+        font-family: Lato;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 14px;
+        color: #484747;
+        text-decoration: none;
+        -webkit-transition: 0.3s;
+        -o-transition: 0.3s;
+        transition: 0.3s;
+      }
+
+      .lan-coutry-container-header ul li:hover a {
+        font-weight: bold;
+        color: #e0004d;
+      }
+
+      .lan-coutry-container-header ul .select a {
+        font-weight: bold;
+        color: #e0004d;
+      }
+
+      .language-country-swicher-header {
+        width: 270px;
+        position: relative;
+        -webkit-transition: 0.3s;
+        -o-transition: 0.3s;
+        transition: 0.3s;
+        position: absolute;
+        z-index: 999 !important;
+        bottom: 10px;
+        right: 50px;
+        background: #fff;
+      }
+
+      .visiable-part-header {
+        width: 270px;
+        height: 180px;
+        border-radius: 6px;
+        box-shadow: 3px 10px 50px rgba(41, 41, 41, 0.15);
+        padding: 20px;
+        position: relative;
+        top: 260px;
+        /* visibility: hidden; */
+        display: none;
+        background: #fff;
+        -webkit-transition: 0.3s;
+        -o-transition: 0.3s;
+        transition: 0.3s;
+      }
+
+      .visiable-inner-header {
+        display: flex;
+        -webkit-transition: 0.3s;
+        -o-transition: 0.3s;
+        transition: 0.3s;
+      }
+
+      .visiable-part-header::after {
+        content: "";
+        position: absolute;
+        bottom: 160px !important;
+        right: 28px;
+        height: 32px;
+        width: 32px;
+        background: #ffffff;
+        transform: rotate(45deg);
+      }
+
+      .visiable-country-header {
+        border-right: 1px solid #dee2e4;
+        width: 135px;
+      }
+
+      .visiable-lang-header {
+        padding-left: 20px;
+      }
+
+      .heading-header {
+        font-family: Lato;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 17px;
+        color: #484747;
+      }
+
+      .bottom-part-header {
+        display: flex;
+        text-align: right;
+        right: 0px;
+        position: absolute;
+        vertical-align: middle;
+        line-height: 0px;
+      }
+
+      .bottom-part-header .icon {
+        margin-right: 5px;
+      }
+
+      .bottom-part-header .bo-country-header {
+        font-family: Lato;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 17px;
+        color: #484747;
+        border-right: 2px solid #dee2e4;
+        padding-right: 8px;
+        margin-right: 8px;
+        padding-top: 2px;
+      }
+
+      .bottom-part-header .bo-lang-header {
+        font-family: Lato;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 17px;
+        color: #484747;
+        padding-top: 2px;
+      }
+
+      .lan-coutry-container-footer ul {
+        padding: 0px;
+        margin: 0px;
+      }
+
+      .lan-coutry-container-footer ul li {
+        list-style: none;
+        padding-top: 15px;
+      }
+
+      .lan-coutry-container-footer ul li a {
+        font-family: Lato;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 14px;
+        color: #484747;
+        text-decoration: none;
+        -webkit-transition: 0.3s;
+        -o-transition: 0.3s;
+        transition: 0.3s;
+      }
+
+      .lan-coutry-container-footer ul li:hover a {
+        font-weight: bold;
+        color: #e0004d;
+      }
+
+      .lan-coutry-container-footer ul .select a {
+        font-weight: bold;
+        color: #e0004d;
+      }
+
+      .language-country-swicher-footer {
+        width: 270px;
+        position: relative;
+        -webkit-transition: 0.3s;
+        -o-transition: 0.3s;
+        transition: 0.3s;
+        position: absolute;
+        z-index: 999 !important;
+        bottom: 0px;
+        right: 50px;
+        background: #fff;
+      }
+
+      .language-country-swicher-footer:hover .visiable-part-footer {
+        display: block;
+      }
+
+      .visiable-part-footer {
+        width: 270px;
+        border-radius: 6px;
+        box-shadow: 3px 10px 50px rgba(41, 41, 41, 0.15);
+        padding: 20px;
+        position: relative;
+        margin-bottom: 30px;
+
+        display: none;
+        -webkit-transition: 0.3s;
+        -o-transition: 0.3s;
+        transition: 0.3s;
+      }
+
+      .visiable-inner-footer {
+        display: flex;
+        -webkit-transition: 0.3s;
+        -o-transition: 0.3s;
+        transition: 0.3s;
+      }
+
+      .visiable-part-footer::after {
+        content: "";
+        position: absolute;
+        bottom: -16px;
+        right: 28px;
+        height: 32px;
+        width: 32px;
+        background: #ffffff;
+        transform: rotate(45deg);
+      }
+
+      .visiable-country-footer {
+        border-right: 1px solid #dee2e4;
+        width: 135px;
+      }
+
+      .visiable-lang-footer {
+        padding-left: 20px;
+      }
+
+      .heading-footer {
+        font-family: Lato;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 17px;
+        color: #484747;
+      }
+
+      .bottom-part-footer {
+        display: flex;
+        text-align: right;
+        right: 0px;
+        position: absolute;
+        vertical-align: middle;
+        line-height: 0px;
+      }
+
+      .bottom-part-footer .icon {
+        margin-right: 5px;
+      }
+
+      .bottom-part-footer .bo-country-footer {
+        font-family: Lato;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 17px;
+        color: #484747;
+        border-right: 2px solid #dee2e4;
+        padding-right: 8px;
+        margin-right: 8px;
+        padding-top: 2px;
+      }
+
+      .bottom-part-footer .bo-lang-footer {
+        font-family: Lato;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 17px;
+        color: #484747;
+        padding-top: 2px;
+      }
+
+      /* === language switcher css end  === */
+    </style>
+  </head>
+  <body>
+    <!-- <div class="">
+      <div class="language-country-swicher-header">
+        <div class="lan-coutry-container-header">
+          <div class="visiable-part-header">
+            <div class="visiable-inner-header">
+              <div class="visiable-country-header">
+                <div class="heading-header">Country</div>
+                <ul class="country-list-shwicher-header">
+                  <li
+                    class="single-country switzerland"
+                    data-value="Switzerland"
+                  >
+                    <a href="#" class="single-country-link">Switzerland</a>
+                  </li>
+                  <li
+                    class="single-country unided-Kingdom"
+                    data-value="United Kingdom"
+                  >
+                    <a href="#" class="single-country-link">United Kingdom</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="visiable-lang-header">
+                <div class="heading-header">Language</div>
+                <ul class="language-list-shwicher-header">
+                  <li
+                    class="single-lang german"
+                    data-value="German"
+                    style="display: none"
+                  >
+                    <a
+                      href="#"
+                      id="single-lang-link"
+                      class="single-lang-link lan-ge lan-en"
+                      >German</a
+                    >
+                  </li>
+                  <li class="single-lang english" data-value="English">
+                    <a
+                      href="#"
+                      id="single-lang-link"
+                      class="single-lang-link lan-en"
+                      >English</a
+                    >
+                  </li>
+                  <li
+                    class="single-lang french"
+                    data-value="French"
+                    style="display: none"
+                  >
+                    <a
+                      href="#"
+                      id="single-lang-link"
+                      class="single-lang-link lan-fr lan-en"
+                      >French</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
-          <div class="visiable-lang-header">
-            <div class="heading-header">Language</div>
-            <ul class="language-list-shwicher-header">
-              <li
-                class="single-lang german"
-                data-value="German"
-                style="display: none"
-              >
-                <a
-                  href="#"
-                  id="single-lang-link"
-                  class="single-lang-link lan-ge"
-                  >German</a
-                >
-              </li>
-              <li class="single-lang english" data-value="English">
-                <a
-                  href="#"
-                  id="single-lang-link"
-                  class="single-lang-link lan-en"
-                  >English</a
-                >
-              </li>
-              <li
-                class="single-lang french"
-                data-value="French"
-                style="display: none"
-              >
-                <a
-                  href="#"
-                  id="single-lang-link"
-                  class="single-lang-link lan-fr"
-                  >French</a
-                >
-              </li>
-            </ul>
+          <div class="bottom-part-header">
+            <div class="icon">
+              <div style="display: none" class="icon-switzerland">
+                <img
+                  src="https://cooplenlstage.wpengine.com/uk/wp-content/uploads/sites/7/2020/07/iconswitch.png"
+                  alt="Switzerland"
+                />
+              </div>
+              <div style="display: none" class="icon-uk">
+                <img
+                  src="https://cooplenlstage.wpengine.com/uk/wp-content/uploads/sites/7/2020/07/ukicon.png"
+                  alt="united Kingdom"
+                />
+              </div>
+              <div style="display: none" class="icon-netherlands">
+                <img
+                  src="https://cooplenlstage.wpengine.com/uk/wp-content/uploads/sites/7/2020/07/iconnetherlands.png"
+                  alt="Netherlands"
+                />
+              </div>
+            </div>
+            <div id="bo-country-header" class="bo-country-header">
+              United Kingdom
+            </div>
+            <div id="bo-lang-header" class="bo-lang-header">English</div>
           </div>
         </div>
       </div>
-      <div class="bottom-part-header">
-        <div class="icon">
-          <div style="display: none" class="icon-switzerland">
-            <img
-              src="https://cooplenlstage.wpengine.com/uk/wp-content/uploads/sites/7/2020/07/iconswitch.png"
-              alt="Switzerland"
-            />
-          </div>
-          <div style="display: none" class="icon-uk">
-            <img
-              src="https://cooplenlstage.wpengine.com/uk/wp-content/uploads/sites/7/2020/07/ukicon.png"
-              alt="united Kingdom"
-            />
-          </div>
-          <div style="display: none" class="icon-netherlands">
-            <img
-              src="https://cooplenlstage.wpengine.com/uk/wp-content/uploads/sites/7/2020/07/iconnetherlands.png"
-              alt="Netherlands"
-            />
+    </div> -->
+
+    <!-- For footer -->
+
+    <div></div>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem unde
+      et expedita quis quas, molestiae numquam excepturi eum saepe voluptatibus?
+      Nihil et quod necessitatibus soluta dolorum, ipsa aut reiciendis
+      aspernatur.
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem unde
+      et expedita quis quas, molestiae numquam excepturi eum saepe voluptatibus?
+      Nihil et quod necessitatibus soluta dolorum, ipsa aut reiciendis
+      aspernatur.
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem unde
+      et expedita quis quas, molestiae numquam excepturi eum saepe voluptatibus?
+      Nihil et quod necessitatibus soluta dolorum, ipsa aut reiciendis
+      aspernatur.
+    </p>
+
+    <div class="language-country-swicher-footer">
+      <div class="lan-coutry-container-footer">
+        <div class="visiable-part-footer">
+          <div class="visiable-inner-footer">
+            <div class="visiable-country-footer">
+              <div class="heading-footer">Country</div>
+              <ul class="country-list-shwicher-footer">
+                <li class="single-country switzerland" data-value="Switzerland">
+                  <a class="single-country-link">Switzerland</a>
+                </li>
+                <li
+                  class="single-country unided-Kingdom"
+                  data-value="United Kingdom"
+                >
+                  <a class="single-country-link">United Kingdom</a>
+                </li>
+              </ul>
+            </div>
+            <div class="visiable-lang-footer">
+              <div class="heading-footer">Language</div>
+              <ul class="language-list-shwicher-footer">
+                <li
+                  class="single-lang german"
+                  data-value="German"
+                  style="display: none"
+                >
+                  <a href="#" id="single-lang-link" class="single-lang-link"
+                    >German</a
+                  >
+                </li>
+                <li class="single-lang english" data-value="English">
+                  <a href="#" id="single-lang-link" class="single-lang-link"
+                    >English</a
+                  >
+                </li>
+                <li
+                  class="single-lang french"
+                  data-value="French"
+                  style="display: none"
+                >
+                  <a href="#" id="single-lang-link" class="single-lang-link"
+                    >French</a
+                  >
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
-        <div id="bo-country-header" class="bo-country-header">
-          United Kingdom
+        <div class="bottom-part-footer">
+          <div class="icon">
+            <div style="display: none" class="icon-switzerland">
+              <img
+                src="https://cooplenldev.wpengine.com/uk/wp-content/uploads/sites/7/2020/07/iconswitch.png"
+                alt="Switzerland"
+              />
+            </div>
+            <div style="display: none" class="icon-uk">
+              <img
+                src="https://cooplenldev.wpengine.com/uk/wp-content/uploads/sites/7/2020/07/ukicon.png"
+                alt="united Kingdom"
+              />
+            </div>
+          </div>
+          <div id="bo-country-footer" class="bo-country-footer">
+            United Kingdom
+          </div>
+          <div id="bo-lang-footer" class="bo-lang-footer">English</div>
         </div>
-        <div id="bo-lang-header" class="bo-lang-header">English</div>
       </div>
     </div>
-  </div>
-</div>
+
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam esse ipsa
+      fugiat explicabo necessitatibus id iure quas ut consectetur? Sed, totam
+      excepturi? Dolor dolorum id voluptatum illo nam aperiam delectus.
+    </p>
+
+    <!-- <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        let bottomPartHeader = document.querySelector(".bottom-part-header");
+        let visiablePartHeader = document.querySelector(
+          ".visiable-part-header"
+        );
+        let lanEnLinks = document.querySelectorAll(".lan-en");
+        let unidedKingdom = document.querySelector(".unided-Kingdom");
+        let netherlands = document.querySelector(".netherlands");
+        let switzerland = document.querySelector(".switzerland");
+        let boCountryHeader = document.querySelector(".bo-country-header");
+        let iconUk = document.querySelector(".icon-uk");
+        let iconSwitzerland = document.querySelector(".icon-switzerland");
+        let iconNetherlands = document.querySelector(".icon-netherlands");
+        let boLangHeader = document.querySelector(".bo-lang-header");
+        let countryListShwicherHeader = document.querySelector(
+          ".country-list-shwicher-header"
+        );
+
+        let isVisible = false;
+        bottomPartHeader.addEventListener("click", function () {
+          // alert("ok");
+          // visiablePartHeader.style.display =
+          //   visiablePartHeader.style.display === "none" ? "block" : "none";
+
+          isVisible = !isVisible;
+          visiablePartHeader.style.display = isVisible ? "block" : "none";
+
+          let slug = window.location.pathname.replace(/(uk|en|fr|de)\//, "");
+          lanEnLinks.forEach(function (link) {
+            link.href = "https://" + location.hostname + "/uk/" + slug;
+          });
+        });
+
+        unidedKingdom.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          document
+            .querySelectorAll(".english, .german, .french, .dutch")
+            .forEach(function (element) {
+              element.style.display = element.classList.contains("english")
+                ? ""
+                : "none";
+            });
+
+          let slug = window.location.pathname.replace(/(uk|en|fr|de)\//, "");
+          lanEnLinks.forEach(function (link) {
+            link.href = "https://" + location.hostname + "/uk/" + slug;
+          });
+        });
+
+        netherlands?.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          document
+            .querySelectorAll(".dutch, .english, .german, .french")
+            .forEach(function (element) {
+              element.style.display = element.classList.contains("dutch")
+                ? ""
+                : "none";
+            });
+        });
+
+        switzerland.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          document
+            .querySelectorAll(".dutch, .english, .german, .french")
+            .forEach(function (element) {
+              console.log({ element });
+
+              element.style.display = element.classList.contains("german")
+                ? ""
+                : "block";
+            });
+
+          let slug = window.location.pathname.replace(/(uk|en|fr|de)\//, "");
+          lanEnLinks[0].href = "https://" + location.hostname + "/ch/en" + slug;
+          lanEnLinks[1].href = "https://" + location.hostname + "/ch" + slug;
+          lanEnLinks[2].href = "https://" + location.hostname + "/ch/fr" + slug;
+
+          // lanEnLinks.forEach(function (link) {
+          //   console.log(link);
+          //   // Update href properties for each link
+          //   let slug = window.location.pathname.replace(/(uk|en|fr|de)\//, "");
+          //   console.log({ slug });
+          //  link.href = "https://" + location.hostname + "/ch" + slug;
+
+          // });
+        });
+
+        let pathname = window.location.pathname;
+        if (pathname.indexOf("uk") === 1) {
+          boCountryHeader.textContent = "United Kingdom";
+          iconUk.style.display = "";
+        }
+
+        if (pathname.indexOf("/en") !== -1) {
+          boLangHeader.textContent = "English";
+        } else if (pathname.indexOf("/fr") !== -1) {
+          boLangHeader.textContent = "French";
+        } else {
+          boLangHeader.textContent = "English";
+        }
+
+        countryListShwicherHeader.addEventListener("click", function (e) {
+          if (e.target.tagName === "A") {
+            let selected = e.target.parentElement;
+            selected.classList.add("select");
+            let siblings = selected.parentElement.children;
+            for (let i = 0; i < siblings.length; i++) {
+              if (siblings[i] !== selected) {
+                siblings[i].classList.remove("select");
+              }
+            }
+
+            boCountryHeader.textContent = selected.dataset.value;
+
+            let countryDateValue = boCountryHeader.textContent;
+            if (countryDateValue === "Switzerland") {
+              iconSwitzerland.style.display = "";
+              iconUk.style.display = "none";
+              iconNetherlands.style.display = "none";
+            } else if (countryDateValue === "United Kingdom") {
+              iconUk.style.display = "";
+              iconNetherlands.style.display = "none";
+              iconSwitzerland.style.display = "none";
+            } else if (countryDateValue === "Netherlands") {
+              iconNetherlands.style.display = "";
+              iconSwitzerland.style.display = "none";
+              iconUk.style.display = "none";
+            } else {
+              iconSwitzerland.style.display = "";
+              iconUk.style.display = "none";
+              iconNetherlands.style.display = "none";
+            }
+          }
+        });
+      });
+    </script> -->
+
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      jQuery(document).ready(function ($) {
+        $(".unided-Kingdom").click(function (e) {
+          e.preventDefault();
+
+          $(".english").removeAttr("style");
+          $(".german").css({ display: "none" });
+          $(".french").css({ display: "none" });
+          $(".dutch").css({ display: "none" });
+        });
+
+        $(".netherlands").click(function (e) {
+          e.preventDefault();
+
+          $(".dutch").removeAttr("style");
+          $(".english").removeAttr("style");
+          $(".german").css({ display: "none" });
+          $(".french").css({ display: "none" });
+        });
+
+        $(".switzerland").click(function (e) {
+          e.preventDefault();
+
+          $(".dutch").css({ display: "none" });
+          $(".english").removeAttr("style");
+          $(".german").removeAttr("style");
+          $(".french").removeAttr("style");
+        });
+
+        var pathname = window.location.pathname;
+        if (pathname.search("uk") == 1) {
+          $(".bo-country-footer").text("United Kingdom");
+          $(".icon-uk").removeAttr("style");
+        }
+
+        if (pathname.search("en") == 1) {
+          $(".bo-lang-footer").text("English");
+        }
+        if (pathname.search("ge") == 1) {
+          $(".bo-lang-footer").text("German");
+        }
+        if (pathname.search("fr") == 1) {
+          $(".bo-lang-footer").text("French");
+        }
+
+        $(".country-list-shwicher-footer").on("click", "a", function (e) {
+          e.preventDefault();
+          var $this = $(this).parent();
+          $this.addClass("select").siblings().removeClass("select");
+
+          $(".bo-country-footer").text($this.data("value"));
+
+          //svg ad
+          var country_date_value = $(".bo-country-footer").text();
+
+          if (country_date_value == "Switzerland") {
+            $(".icon-switzerland").removeAttr("style");
+            $(".icon-uk").css({ display: "none" });
+            $(".icon-netherlands").css({ display: "none" });
+          } else if (country_date_value == "United Kingdom") {
+            $(".icon-uk").removeAttr("style");
+            $(".icon-netherlands").css({ display: "none" });
+            $(".icon-switzerland").css({ display: "none" });
+          } else if (country_date_value == "Netherlands") {
+            $(".icon-netherlands").removeAttr("style");
+            $(".icon-switzerland").css({ display: "none" });
+            $(".icon-uk").css({ display: "none" });
+          } else {
+            $(".icon-switzerland").removeAttr("style");
+            $(".icon-uk").css({ display: "none" });
+            $(".icon-netherlands").css({ display: "none" });
+          }
+        });
+
+        $(".language-list-shwicher-footer").on("click", "a", function (e) {
+          e.preventDefault();
+          var $this = $(this).parent();
+          $this.addClass("select").siblings().removeClass("select");
+          $(".bo-lang-footer").text($this.data("value"));
+        });
+
+        var slug = window.location.pathname;
+        slug = slug.replace("/uk/", "");
+
+        $(".language-list-shwicher-footer").on("click", "a", function (e) {
+          e.preventDefault();
+          var $this = $(this).parent();
+
+          var country = $("#bo-country-footer").text();
+          var lang = $("#bo-lang-footer").text();
+
+          if (country == "Switzerland" && lang == "English") {
+            window.location.href =
+              "https://cooplenlstage.wpengine.com/ch/en/" + slug;
+          } else if (country == "Switzerland" && lang == "German") {
+            window.location.href =
+              "https://cooplenlstage.wpengine.com/ch/" + slug;
+          } else if (country == "Switzerland" && lang == "French") {
+            window.location.href =
+              "https://cooplenlstage.wpengine.com/ch/fr/" + slug;
+          } else if (country == "United Kingdom" && lang == "English") {
+            window.location.href =
+              "https://cooplenlstage.wpengine.com/uk/" + slug;
+          } else if (country == "United Kingdom" && lang == "German") {
+            window.location.href =
+              "https://cooplenlstage.wpengine.com/uk/ge/" + slug;
+          } else if (country == "United Kingdom" && lang == "French") {
+            window.location.href =
+              "https://cooplenlstage.wpengine.com/uk/fr/" + slug;
+          } else {
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
