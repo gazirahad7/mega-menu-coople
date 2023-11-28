@@ -1,0 +1,415 @@
+:root {
+  --secondary-color: #f2f4f5;
+  --bg-pink: #e0004d;
+}
+
+/* ====== Global setting  ======== */
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  /* color: #666; */
+}
+
+/* ====== Reuseable  class ======== */
+
+.w-150 {
+  width: 150px;
+}
+.cus-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 40px;
+  grid-auto-flow: row;
+}
+.cus-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+}
+
+.cus-justify-between {
+  display: flex;
+  justify-content: space-between;
+}
+.cus-align-items-center {
+  align-items: center;
+}
+.cus-text-align-right {
+  text-align: right;
+}
+.cus-text-align-center {
+  text-align: center;
+}
+.cus-d-flex {
+  display: flex;
+}
+.cus-flex-col {
+  flex-direction: column;
+}
+.hidden {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 0.3s ease-in-out, max-height 0.3s ease-in-out;
+}
+.visible {
+  opacity: 1;
+  max-height: 100%;
+  transition: opacity 0.3s ease-in-out, max-height 0.3s ease-in-out;
+}
+
+.cus-container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.cus-container-fluid {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.cus-divider {
+  color: #dee2e4;
+}
+
+.cus-v-divider {
+  border-right: 1px solid #7b7a7a;
+}
+/* ======== custom Buttons    ======== */
+
+.cus-login-btn {
+  padding: 10px 20px;
+  border-radius: 4px;
+  border: 1px solid #7b7a7a;
+  background: #fff;
+  color: #666;
+}
+.cus-apply-btn {
+  padding: 10px 20px;
+  border-radius: 4px;
+  background: var(--bg-pink);
+  color: #fff !important;
+  font-weight: 600;
+}
+/* ======== custom colors    ======== */
+.cus-bg-secondary {
+  background-color: var(--secondary-color);
+}
+.cus-bg-pink {
+  background-color: var(--bg-pink);
+}
+.cus-text-black {
+  color: #000 !important;
+}
+.cus-text-gray {
+  color: #333 !important;
+}
+.cus-text-white {
+  color: #fff !important;
+}
+.cus-text-pink {
+  color: var(--bg-pink) !important;
+}
+.cus-bg-dark {
+  background-color: #282727;
+}
+/* ========  Typology    ======== */
+
+.cus-gap {
+  gap: 40px;
+}
+.cus-gap-1 {
+  gap: 10px;
+}
+.cus-gap-2 {
+  gap: 20px;
+}
+.cus-gap-4 {
+  gap: 40px;
+}
+.cus-gap-5 {
+  gap: 50px;
+}
+.cus-gap-6 {
+  gap: 60px;
+}
+.cus-gap-10 {
+  gap: 100px;
+}
+
+.cus-m-0 {
+  margin: 0 !important;
+}
+.cus-p-0 {
+  padding: 0 !important;
+}
+.cus-p-1 {
+  padding: 10px;
+}
+.cus-p-2 {
+  padding: 20px;
+}
+.cus-p-3 {
+  padding: 30px;
+}
+
+.cus-p-4 {
+  padding: 40px;
+}
+.cus-p-5 {
+  padding: 50px;
+}
+.cus-p-8 {
+  padding: 80px;
+}
+.cus-pt-2 {
+  padding-top: 20px;
+}
+.cus-pt-4 {
+  padding-top: 40px;
+}
+.cus-pb-2 {
+  padding-bottom: 20px;
+}
+.cus-py-4 {
+  padding: 40px 0;
+}
+.cus-py-5 {
+  padding: 50px 0;
+}
+.cus-pb-5 {
+  padding-bottom: 50px;
+}
+.cus-pb-3 {
+  padding-bottom: 30px;
+}
+.cus-pr-10 {
+  padding-right: 100px;
+}
+.cus-text-12 {
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  color: #666;
+  line-height: 16px;
+}
+.cus-text-xs {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+}
+.cus-text-sm {
+  color: #666;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px;
+}
+.cus-text-md {
+  color: #333;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px;
+}
+.cus-text-lg {
+  color: #333;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 30px;
+}
+.cus-text-2xl {
+  color: #333;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 45px;
+}
+
+.cus-fw-600 {
+  font-weight: 600;
+}
+
+.cus-heading-1 {
+  font-size: 45px;
+  font-style: normal;
+  line-height: 50px;
+  color: #282727;
+  font-weight: 700;
+}
+.cus-heading-2 {
+  font-size: 36px;
+  font-style: normal;
+  line-height: 54px;
+  color: #282727;
+  font-weight: 700;
+}
+
+/* ======= Background img css ============ */
+
+.bg-img {
+  background-image: url("/public/images/mockup-pillar/banner.png");
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.cus-card-root {
+  display: grid;
+  place-items: center;
+
+  grid-auto-flow: row;
+  width: 100%;
+}
+.cus-card {
+  background-color: #282727;
+  padding: 80px;
+  text-align: center;
+}
+
+.cus-card h3,
+.cus-card p {
+  color: #fff !important;
+}
+.cus-card a {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 16px 32px;
+}
+/* ======= Responsive ============ */
+
+@media only screen and (max-width: 600px) {
+  .cus-grid-2 {
+    grid-template-columns: 1fr;
+  }
+  .cus-v-divider {
+    border: none !important;
+  }
+  .cus-heading-1 {
+    font-size: 25px;
+    line-height: 40px;
+  }
+  .cus-heading-2 {
+    font-size: 24px;
+    line-height: 35px;
+  }
+
+  .cus-card-root {
+    display: grid;
+    place-items: center;
+
+    grid-auto-flow: row;
+  }
+
+  .cus-card {
+    padding: 30px;
+    margin: 0 20px;
+  }
+  .cus-card h3 {
+    font-size: 25px !important;
+    line-height: 32px !important;
+  }
+  .cus-gap-6 {
+    gap: 0;
+  }
+  .services .cus-d-flex {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .cus-d-sm-none {
+    display: none !important;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .cus-container {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .cus-container {
+    max-width: 720px;
+  }
+  .cus-heading-1 {
+    font-size: 30px;
+  }
+  .cus-grid-2 {
+    grid-template-columns: 1fr;
+  }
+  .cus-v-divider {
+    border: none !important;
+  }
+  .cus-heading-1 {
+    line-height: 40px;
+  }
+  .cus-gap-6 {
+    gap: 0;
+  }
+  .cus-text-align-right {
+    text-align: center;
+  }
+}
+@media (min-width: 992px) {
+  .cus-container {
+    max-width: 960px;
+  }
+  .cus-heading-1 {
+    font-size: 45px;
+  }
+  .cus-grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .cus-v-divider {
+    border-right: 1px solid #7b7a7a;
+  }
+  .cus-heading-1 {
+    line-height: 56px;
+  }
+
+  .cus-gap-6 {
+    gap: 60px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .cus-container {
+    max-width: 1140px;
+  }
+  .cus-container-fluid {
+    max-width: 1200px;
+  }
+}
+@media (min-width: 1500px) {
+  .cus-container {
+    max-width: 1360px;
+  }
+}
+
+/* ==== for image responsive css ==== */
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+/* For small screens */
+@media (max-width: 768px) {
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
