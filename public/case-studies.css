@@ -269,6 +269,19 @@ blockquote::before {
   vertical-align: -0.15em;
 }
 
+.cus-blockquote-container {
+  display: block;
+  width: 800px;
+  margin: 0 auto;
+}
+.blockquote-two blockquote::before {
+  position: absolute;
+  left: 0;
+  content: open-quote open-quote;
+  margin-right: 0.15em;
+  vertical-align: -0.15em;
+}
+
 /* blockquote::after {
     content: close-quote;
     vertical-align: -0.7em;
@@ -328,7 +341,8 @@ blockquote::before {
     line-height: 40px;
   }
 
-  blockquote {
+  blockquote,
+  .blockquote-two blockquote {
     font-size: 20px;
     padding-left: 40px;
 
@@ -337,7 +351,8 @@ blockquote::before {
     quotes: "\201C""\201D""\2018""\2019";
     line-height: 30px;
   }
-  blockquote::before {
+  blockquote::before,
+  .blockquote-two blockquote::before {
     color: #e0004d;
     font-size: 100px;
     font-weight: 500;
@@ -353,6 +368,10 @@ blockquote::before {
   .services .cus-d-flex {
     flex-direction: column;
     gap: 20px;
+  }
+
+  .cus-blockquote-center {
+    display: block;
   }
 }
 
@@ -380,6 +399,12 @@ blockquote::before {
   .cus-gap-6 {
     gap: 0;
   }
+
+  .cus-blockquote-center {
+    display: block;
+    width: 650px;
+    margin: 0 auto;
+  }
 }
 @media (min-width: 992px) {
   .cus-container {
@@ -401,6 +426,11 @@ blockquote::before {
 
   .cus-gap-6 {
     gap: 60px;
+  }
+  .cus-blockquote-container {
+    display: block;
+    width: 800px;
+    margin: 0 auto;
   }
 }
 
