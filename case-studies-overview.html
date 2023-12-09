@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Coople Case Studies</title>
     <link rel="stylesheet" href="public/case-studies-overview.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
   </head>
   <body>
     <main>
@@ -29,89 +34,192 @@
       <section class="services">
         <!-- root div -->
 
-        <div class="cus-container">
+        <div>
           <!-- Div two  -->
 
           <div class="cus-pt-2">
-            <div class="cus-d-flex cus-justify-between cus-align-items-center">
-              <!-- Card one -->
-              <div class="cus-flex-col">
-                <div class="cus-service-card">
-                  <span class="featured">FEATURED</span>
+            <!-- Card root div  -->
 
-                  <div class="cus-py-2">
-                    <img
-                      src="public/images/case-study-overview/logo-1.png"
-                      alt="LOGO"
-                    />
-                  </div>
+            <div class="service-card-desktop-view cus-container">
+              <div
+                class="cus-d-flex cus-justify-between cus-align-items-center"
+              >
+                <!-- Card one -->
+                <div class="cus-flex-col">
+                  <div class="cus-service-card">
+                    <span class="featured">FEATURED</span>
 
-                  <div class="cus-m-0">
-                    <p class="cus-text-sm cus-m-0">
-                      <span class="cus-text-gray cus-fw-500">
-                        Hello Fresh:</span
-                      >
-                      how the UK’s leading recipe box company scaled up their
-                      operations in times of unpredictable growth.
-                    </p>
+                    <div class="cus-py-2">
+                      <img
+                        src="public/images/case-study-overview/logo-1.png"
+                        alt="LOGO"
+                      />
+                    </div>
 
-                    <p class="cus-text-pink cus-text-xs cus-m-0">Read more</p>
-                  </div>
-                </div>
-              </div>
-              <!-- Card two -->
-              <div class="cus-flex-col">
-                <div class="cus-service-card">
-                  <span class="featured">FEATURED</span>
+                    <div class="cus-m-0">
+                      <p class="cus-text-sm cus-m-0">
+                        <span class="cus-text-gray cus-fw-500">
+                          Hello Fresh:</span
+                        >
+                        how the UK’s leading recipe box company scaled up their
+                        operations in times of unpredictable growth.
+                      </p>
 
-                  <div class="cus-py-2">
-                    <img
-                      src="public/images/case-study-overview/logo-2.png"
-                      alt="LOGO"
-                    />
-                  </div>
-
-                  <div class="cus-m-0">
-                    <p class="cus-text-sm cus-m-0">
-                      <span class="cus-text-gray cus-fw-500">
-                        Hello Fresh:</span
-                      >
-                      how the UK’s leading recipe box company scaled up their
-                      operations in times of unpredictable growth.
-                    </p>
-
-                    <p class="cus-text-pink cus-text-xs cus-m-0">Read more</p>
+                      <p class="cus-text-pink cus-text-xs cus-m-0">Read more</p>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <!-- Card three -->
-              <div class="cus-flex-col">
-                <div class="cus-service-card">
-                  <span class="featured">FEATURED</span>
+                <!-- Card two -->
+                <div class="cus-flex-col">
+                  <div class="cus-service-card">
+                    <span class="featured">FEATURED</span>
 
-                  <div class="cus-py-2">
-                    <img
-                      src="public/images/case-study-overview/logo-3.png"
-                      alt="LOGO"
-                    />
+                    <div class="cus-py-2">
+                      <img
+                        src="public/images/case-study-overview/logo-2.png"
+                        alt="LOGO"
+                      />
+                    </div>
+
+                    <div class="cus-m-0">
+                      <p class="cus-text-sm cus-m-0">
+                        <span class="cus-text-gray cus-fw-500">
+                          Hello Fresh:</span
+                        >
+                        how the UK’s leading recipe box company scaled up their
+                        operations in times of unpredictable growth.
+                      </p>
+
+                      <p class="cus-text-pink cus-text-xs cus-m-0">Read more</p>
+                    </div>
                   </div>
+                </div>
+                <!-- Card three -->
+                <div class="cus-flex-col">
+                  <div class="cus-service-card">
+                    <span class="featured">FEATURED</span>
 
-                  <div class="cus-m-0">
-                    <p class="cus-text-sm cus-m-0">
-                      <span class="cus-text-gray cus-fw-500">
-                        Hello Fresh:</span
-                      >
-                      how the UK’s leading recipe box company scaled up their
-                      operations in times of unpredictable growth.
-                    </p>
+                    <div class="cus-py-2">
+                      <img
+                        src="public/images/case-study-overview/logo-3.png"
+                        alt="LOGO"
+                      />
+                    </div>
 
-                    <p class="cus-text-pink cus-text-xs cus-m-0">Read more</p>
+                    <div class="cus-m-0">
+                      <p class="cus-text-sm cus-m-0">
+                        <span class="cus-text-gray cus-fw-500">
+                          Hello Fresh:</span
+                        >
+                        how the UK’s leading recipe box company scaled up their
+                        operations in times of unpredictable growth.
+                      </p>
+
+                      <p class="cus-text-pink cus-text-xs cus-m-0">Read more</p>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div class="cus-py-2">
+            <!-- Markup  for card slider mobile view -->
+            <div class="service-card-mobile-view">
+              <div class="swiper">
+                <div class="product-slider">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <!-- Card one -->
+                      <div class="cus-flex-col">
+                        <div class="cus-service-card">
+                          <span class="featured">FEATURED</span>
+
+                          <div class="cus-py-2">
+                            <img
+                              src="public/images/case-study-overview/logo-1.png"
+                              alt="LOGO"
+                            />
+                          </div>
+
+                          <div class="cus-m-0">
+                            <p class="cus-text-sm cus-m-0">
+                              <span class="cus-text-gray cus-fw-500">
+                                Hello Fresh:</span
+                              >
+                              how the UK’s leading recipe box company scaled up
+                              their operations in times of unpredictable growth.
+                            </p>
+
+                            <p class="cus-text-pink cus-text-xs cus-m-0">
+                              Read more
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <!-- Card two -->
+                      <div class="cus-flex-col">
+                        <div class="cus-service-card">
+                          <span class="featured">FEATURED</span>
+
+                          <div class="cus-py-2">
+                            <img
+                              src="public/images/case-study-overview/logo-2.png"
+                              alt="LOGO"
+                            />
+                          </div>
+
+                          <div class="cus-m-0">
+                            <p class="cus-text-sm cus-m-0">
+                              <span class="cus-text-gray cus-fw-500">
+                                Hello Fresh:</span
+                              >
+                              how the UK’s leading recipe box company scaled up
+                              their operations in times of unpredictable growth.
+                            </p>
+
+                            <p class="cus-text-pink cus-text-xs cus-m-0">
+                              Read more
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <!-- Card three -->
+                      <div class="cus-flex-col">
+                        <div class="cus-service-card">
+                          <span class="featured">FEATURED</span>
+
+                          <div class="cus-py-2">
+                            <img
+                              src="public/images/case-study-overview/logo-3.png"
+                              alt="LOGO"
+                            />
+                          </div>
+
+                          <div class="cus-m-0">
+                            <p class="cus-text-sm cus-m-0">
+                              <span class="cus-text-gray cus-fw-500">
+                                Hello Fresh:</span
+                              >
+                              how the UK’s leading recipe box company scaled up
+                              their operations in times of unpredictable growth.
+                            </p>
+
+                            <p class="cus-text-pink cus-text-xs cus-m-0">
+                              Read more
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="cus-container cus-py-2">
               <p class="cus-text-md">
                 See how we’re helping organisations just like yours quickly find
                 and hire staff as soon as the need arises. Whether that’s during
@@ -127,6 +235,7 @@
           </div>
         </div>
       </section>
+
       <!-- Markup for  3d section      -->
       <section class="case-studies">
         <!-- root div -->
@@ -443,5 +552,33 @@
         </div>
       </section>
     </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   </body>
+
+  <script>
+    var swiper = new Swiper(".swiper .product-slider", {
+      spaceBetween: -40,
+      loop: true,
+      slidesPerView: "auto",
+      autoplay: true,
+      centeredSlides: true,
+      fade: "true",
+      grabCursor: "true",
+
+      breakpoints: {
+        0: {
+          slidesPerView: 1.4,
+        },
+        520: {
+          slidesPerView: 1.6,
+          //spaceBetween: -150,
+        },
+        768: {
+          slidesPerView: 1.8,
+          // spaceBetween: -200,
+        },
+      },
+    });
+  </script>
 </html>

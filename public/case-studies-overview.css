@@ -106,6 +106,7 @@ a {
   padding-bottom: 1px;
   color: var(--bg-pink);
 }
+
 /* ======== custom Buttons    ======== */
 
 .cus-login-btn {
@@ -395,6 +396,21 @@ a {
 .cus-card a {
   padding: 16px 32px;
 }
+/* ======= lib  ============ */
+
+.product-slider .swiper-slide:not(.swiper-slide-active) {
+  /* transform: scale(0.7) translate3d(0px, 20%, 0px) !important; */
+  transform: translate3d(0px, 20%, 0px) !important;
+}
+.product-slider .swiper-slide img {
+  /* height: 500px !important; */
+  object-fit: cover;
+}
+.product-slider .swiper-slide-active {
+  max-width: 100%;
+  transition: 1s;
+}
+
 /* ======= Responsive ============ */
 
 @media only screen and (max-width: 600px) {
@@ -447,6 +463,20 @@ a {
     gap: 10px 0;
     place-items: center;
   }
+  .service-card-mobile-view {
+    display: block !important;
+  }
+  .service-card-mobile-view .cus-service-card {
+    width: 280px;
+  }
+  .service-card-desktop-view {
+    display: none;
+  }
+
+  .hero .cus-card {
+    background-color: inherit;
+    padding: 100px 0;
+  }
 }
 
 @media only screen and (min-width: 600px) {
@@ -457,6 +487,15 @@ a {
     grid-template-columns: 1fr;
     gap: 10px 0;
     place-items: center;
+  }
+  .service-card-mobile-view {
+    display: block !important;
+  }
+  .service-card-mobile-view .cus-service-card {
+    width: 280px;
+  }
+  .service-card-desktop-view {
+    display: none;
   }
 }
 @media (min-width: 768px) {
@@ -487,6 +526,14 @@ a {
 
   .services .cus-service-card {
     width: 220px !important;
+  }
+
+  .service-card-mobile-view {
+    display: none !important;
+  }
+
+  .service-card-desktop-view {
+    display: block;
   }
 }
 @media (min-width: 992px) {
