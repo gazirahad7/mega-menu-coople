@@ -97,6 +97,15 @@ a {
 .cus-v-divider {
   border-right: 1px solid #7b7a7a;
 }
+.cus-underline {
+  border-bottom: 1px solid #7b7a7a;
+  padding-bottom: 1px;
+}
+.cus-underline-pink {
+  border-bottom: 1px solid var(--bg-pink);
+  padding-bottom: 1px;
+  color: var(--bg-pink);
+}
 /* ======== custom Buttons    ======== */
 
 .cus-login-btn {
@@ -112,6 +121,15 @@ a {
   background: var(--bg-pink);
   color: #fff !important;
   font-weight: 600;
+}
+
+.load-more-btn {
+  border-radius: 6px;
+  border: 1px solid #484747;
+  padding: 8px 16px;
+  width: 250px;
+  margin: 0 auto;
+  text-align: center;
 }
 /* ======== custom colors    ======== */
 .cus-bg-secondary {
@@ -287,10 +305,16 @@ a {
 }
 /* ======= services card  ============ */
 
+.services {
+  /* transform: translateY(-100px); */
+  margin-top: -100px;
+}
+
 .cus-service-card {
   border-radius: 8px;
   padding: 15px;
-  width: 300px;
+  width: 320px;
+  background-color: #fff;
 
   box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.15);
 }
@@ -429,6 +453,11 @@ a {
   .cus-container {
     max-width: 540px;
   }
+  .cus-grid-4 {
+    grid-template-columns: 1fr;
+    gap: 10px 0;
+    place-items: center;
+  }
 }
 @media (min-width: 768px) {
   .cus-container {
@@ -452,8 +481,12 @@ a {
 
   .cus-grid-4 {
     grid-template-columns: 1fr 1fr;
-    gap: 10px;
+    gap: 40px 0;
     place-items: center;
+  }
+
+  .services .cus-service-card {
+    width: 220px !important;
   }
 }
 @media (min-width: 992px) {
@@ -480,8 +513,13 @@ a {
 
   .cus-grid-4 {
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 10px;
+    gap: 20px;
     place-items: center;
+  }
+
+  .services .cus-service-card,
+  .case-studies .cus-service-card {
+    width: 300px !important;
   }
 }
 
@@ -505,13 +543,27 @@ a {
 
   .cus-grid-4 {
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 10px;
+    gap: 20px;
     place-items: center;
+  }
+
+  .services .cus-service-card {
+    width: 300px !important;
+  }
+  .case-studies .cus-service-card {
+    width: 300px;
   }
 }
 @media (min-width: 1500px) {
   .cus-container {
     max-width: 1360px;
+  }
+  .cus-service-card {
+    width: 320px !important;
+  }
+
+  .cus-grid-4 {
+    gap: 40px 10px;
   }
 }
 
