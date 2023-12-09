@@ -598,7 +598,7 @@ a {
     width: 300px !important;
   }
   .case-studies .cus-service-card {
-    width: 300px;
+    width: 270px !important;
   }
 }
 @media (min-width: 1500px) {
@@ -608,7 +608,9 @@ a {
   .cus-service-card {
     width: 320px !important;
   }
-
+  .case-studies .cus-service-card {
+    width: 320px !important;
+  }
   .cus-grid-4 {
     gap: 40px 10px;
   }
